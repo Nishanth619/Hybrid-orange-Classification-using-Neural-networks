@@ -23,7 +23,8 @@ The models used for classification:
 ## Dataset
 The dataset used for this project can be found on **Kaggle**. It contains images of various hybrid oranges, classified into different types.
 
-**Kaggle Dataset:** [Hybrid Oranges Dataset on Kaggle]([https://www.kaggle.com/username/hybrid-oranges-dataset](https://www.kaggle.com/datasets/jacko9812/colombian-citric-fruits)
+**Kaggle Dataset:** [Hybrid Oranges Dataset on Kaggle](https://www.kaggle.com/datasets/jacko9812/colombian-citric-fruits)
+
 
 To use the dataset in this project:
 1. Download the dataset from Kaggle.
@@ -38,7 +39,17 @@ data/
 ## Model Architecture
 The following models were implemented for the classification task:
 
-InceptionV3: Pretrained on ImageNet, this model was fine-tuned with hybrid orange data for improved accuracy.
-MobileNet: A lightweight model with fewer parameters, making it suitable for mobile applications.
-Custom CNN: A custom-built convolutional neural network designed specifically for this classification task.
+1. **InceptionV3**: Pretrained on ImageNet, this model was fine-tuned with hybrid orange data for improved accuracy.
+2. **MobileNet**: A lightweight model with fewer parameters, making it suitable for mobile and edge applications.
+3. **Custom CNN**: A custom-built convolutional neural network designed specifically for this classification task.
+
+## Performance and Snapshots
+
+### Performance Metrics
+- **InceptionV3**: Achieved 95% accuracy on the validation set.
+- **MobileNet**: Achieved 92% accuracy on the validation set.
+- **Custom CNN**: Achieved 89% accuracy on the validation set.
+
+
+
 
