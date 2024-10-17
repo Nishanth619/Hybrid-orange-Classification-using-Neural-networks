@@ -1,44 +1,36 @@
 # Hybrid Oranges Classification
 
-This project is focused on classifying different types of hybrid oranges using deep learning models, including InceptionV3 and MobileNet. The goal is to enhance quality control and improve overall fruit quality in agricultural sectors.
+This repository contains the implementation of a deep learning model for classifying different types of hybrid oranges. The project uses various advanced models like **InceptionV3**, **MobileNet**, and **CNN** for enhanced classification accuracy. The primary goal is to improve fruit quality control and optimize inventory management through automated classification.
 
 ## Table of Contents
-- [Project Overview](#project-overview)
-- [Dataset](#dataset)
-- [Model Architecture](#model-architecture)
-- [Results](#results)
-- [Setup and Installation](#setup-and-installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+1. [Project Overview](#project-overview)
+2. [Dataset](#dataset)
+3. [Model Architecture](#model-architecture)
+4. [Performance and Snapshots](#performance-and-snapshots)
+5. [Installation](#installation)
+6. [Usage](#usage)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 ## Project Overview
-This project implements a deep learning-based solution to classify hybrid oranges. The dataset includes 8 classes of citrus fruits, including hybrid varieties. The models have been trained using **InceptionV3** and **MobileNet** architectures with fine-tuning for improved accuracy.
+The project focuses on building a deep learning pipeline to classify hybrid oranges into different categories using image data. The pipeline involves data preprocessing, model training, evaluation, and performance tuning to achieve high accuracy.
+
+The models used for classification:
+- **InceptionV3**
+- **MobileNet**
+- **Custom CNN**
 
 ## Dataset
-The dataset is divided into training, validation, and test sets:
-- **Training Set**: 80%
-- **Validation Set**: 20%
+The dataset used for this project can be found on **Kaggle**. It contains images of various hybrid oranges, classified into different types.
 
-## Model Architecture
-We explored multiple architectures for classification, including:
-- **InceptionV3**: Fine-tuned for 8 classes.
-- **MobileNet**: Lightweight architecture optimized for mobile and embedded devices.
+**Kaggle Dataset:** [Hybrid Oranges Dataset on Kaggle]([https://www.kaggle.com/username/hybrid-oranges-dataset](https://www.kaggle.com/datasets/jacko9812/colombian-citric-fruits)
 
-## Results
-- InceptionV3 Accuracy: 92%
-- MobileNet Accuracy: 89%
+To use the dataset in this project:
+1. Download the dataset from Kaggle.
+2. Extract the files and place them in the `data/` directory of this repository.
 
-## Setup and Installation
-
-### Requirements:
-- Python 3.x
-- TensorFlow
-- Keras
-- OpenCV
-- NumPy
-- Matplotlib
-
-Install the required dependencies by running:
 ```bash
-pip install -r requirements.txt
+data/
+├── train/
+├── val/
+└── test/
