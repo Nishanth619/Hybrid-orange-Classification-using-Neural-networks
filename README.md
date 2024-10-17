@@ -34,3 +34,11 @@ data/
 ├── train/
 ├── val/
 └── test/
+
+Model Architecture
+The following models were implemented for the classification task:
+
+InceptionV3: Pretrained on ImageNet, this model was fine-tuned with hybrid orange data for improved accuracy.
+MobileNet: A lightweight model with fewer parameters, making it suitable for mobile applications.
+Custom CNN: A custom-built convolutional neural network designed specifically for this classification task.
+
