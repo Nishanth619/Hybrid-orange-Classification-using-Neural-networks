@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('/static/wp2293522.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            position: relative;
+        }
+
+        /* Overlay for a more dynamic look */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Add a dark gradient overlay */
+            z-index: 0;
+        }
+
+        /* Main container */
+        .container {
+            background-color: rgba(255, 255, 255, 0.95); /* White with slight transparency */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            width: 400px;
+            max-width: 90%;
+            text-align: center;
+            position: relative;
+            z-index: 1; /* Ensure the container is above the background */
+            animation: slideUp 1s ease-out; /* Animation */
+        }
+
+        /* Keyframes for smooth slide-up animation */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Heading */
+        h2 {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* Result text */
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Styling the key result metrics */
+        p strong {
+            color: #007bff;
+        }
+
+        /* Button link */
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 18px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            letter-spacing: 0.5px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        a:active {
+            background-color: #003f7f;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+                width: 80%;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                font-size: 14px;
+                padding: 10px 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            a {
+                font-size: 13px;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Classification Result</h2>
+        <p><strong>Model Used:</strong> {{ model_name }}</p>
+        <p><strong>Predicted Class:</strong> {{ predicted_class_name }}</p>
+        <p><strong>Confidence:</strong> {{ confidence * 100 | round(2) }}%</p>
+        <a href="/">Classify Another Image</a>
+    </div>
+</body>
+</html>
