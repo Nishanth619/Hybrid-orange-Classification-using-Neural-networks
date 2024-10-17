@@ -35,7 +35,7 @@ data/
 ├── val/
 └── test/
 
-Model Architecture
+## Model Architecture
 The following models were implemented for the classification task:
 
 InceptionV3: Pretrained on ImageNet, this model was fine-tuned with hybrid orange data for improved accuracy.
