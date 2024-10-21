@@ -24,7 +24,7 @@ The project focuses on building a deep learning pipeline to classify hybrid oran
 The dataset used for this project can be found on Kaggle. It contains images of various hybrid oranges, classified into different types.
 
 ### Kaggle Dataset
-[Hybrid Oranges Dataset on Kaggle](https://www.kaggle.com/datasets)
+[Hybrid Oranges Dataset on Kaggle](https://www.kaggle.com/datasets/jacko9812/colombian-citric-fruits)
 
 To use the dataset in this project:
 1. Download the dataset from Kaggle.
